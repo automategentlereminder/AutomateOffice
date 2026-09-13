@@ -9,6 +9,7 @@ AutomateOffice brings practical, focused utilities into one place — helping te
 | Tool | Description | Status |
 |------|-------------|--------|
 | [Advanced Renamer](#advanced-renamer) | Dynamic file renaming with spreadsheet columns and preview | Available |
+| [Folder Organizer](#folder-organizer) | Create folder trees from Excel, then place files | Available |
 
 New tools are added as separate modules under `src/modules/`.
 
@@ -29,6 +30,23 @@ An in-app **Quick guide** panel on the tool page covers the same steps.
 
 ```
 src/modules/advanced-renamer/
+```
+
+## Folder Organizer
+
+Create a folder tree from Excel (`File name` + `Folder 1`…`Folder 10`), preview it, create folders under a chosen root, then optionally place files.
+
+### Quick guide
+
+1. **Spreadsheet** — Download the template or upload `.xlsx` / `.csv`.
+2. **Root + checks** — Choose the create location. Progressive checks catch invalid characters, hierarchy gaps, and long Windows paths (override allowed).
+3. **Create folders** — Collapsible tree preview, then create.
+4. **Place files** — (1) Recursively search another folder and copy/move matches, (2) copy one source file under many names, or (3) folders only.
+
+### Module location
+
+```
+src/modules/folder-organizer/
 ```
 
 ## Local development
@@ -95,6 +113,7 @@ Schema migrations run automatically when the app starts.
 src/
   modules/                 # one folder per tool (preferred place for new features)
     advanced-renamer/
+    folder-organizer/
   app/                     # thin Next.js routes that mount modules
   components/              # shared shell UI (sidebar, footer, theme)
   lib/tools/registry.ts    # tool list for the sidebar

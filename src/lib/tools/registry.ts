@@ -2,6 +2,7 @@ import type { LucideIcon } from "lucide-react";
 import { LayoutGrid } from "lucide-react";
 
 import { advancedRenamerTool } from "@/modules/advanced-renamer/meta";
+import { folderOrganizerTool } from "@/modules/folder-organizer/meta";
 
 export type ToolDefinition = {
   id: string;
@@ -22,4 +23,5 @@ export const tools: ToolDefinition[] = [
     status: "available",
   },
   advancedRenamerTool,
+  folderOrganizerTool,
 ];
